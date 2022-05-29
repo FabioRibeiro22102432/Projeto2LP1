@@ -140,6 +140,14 @@ namespace
             }
         }
         
+        /// <summary>
+        /// Creates a random amount of boosts and they are randomly placed in the array, used for UTurns as well
+        /// </summary>
+        /// <param name="amount">amount of boost/u-turns generated randomly</param>
+        /// <param name="min">min position on the board</param>
+        /// <param name="max">max position in the board</param>
+        /// <param name="rand">random position</param>
+        /// <returns>array</returns>
         public int[] boostMaker(int amount, int min, int max, Random rand)
         {
             int[] array = new int[amount];

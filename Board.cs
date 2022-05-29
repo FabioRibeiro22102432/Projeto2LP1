@@ -79,7 +79,9 @@ namespace
             return board;
 
         }
-
+        /// <summary>
+        /// Prints board on console in zigzag  and Players in respective positions
+        /// </summary>
         public  void printBoard()
         {
 
@@ -137,7 +139,7 @@ namespace
                 val -= 5;
             }
         }
-
+        
         public int[] boostMaker(int amount, int min, int max, Random rand)
         {
             int[] array = new int[amount];

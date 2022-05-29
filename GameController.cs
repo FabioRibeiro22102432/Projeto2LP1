@@ -62,7 +62,14 @@ namespace Projeto2
 
         }
 
-
+        /// <summary>
+        /// Receive which player is playing and move the number of tiles given by the die and tile if it's the case
+        /// </summary>
+        /// <param name="player">Which player</param>
+        /// <param name="opponent">Position of the opponent</param>
+        /// <param name="moveByDie">Number given by the die</param>
+        /// <param name="board">Board created by method buildBoard</param>
+        
         private Boolean movePlayerByDie(int player, int opponent, int moveByDie, int[] board)
         {
             //gets the position of the player on the board

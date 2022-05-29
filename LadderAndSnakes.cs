@@ -2,7 +2,7 @@
 
 namespace Projeto2
 {
-    class Program
+    class LaddersAndSnakes
     {
         
         static void Main(string[] args)

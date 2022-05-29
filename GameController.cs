@@ -113,8 +113,9 @@ namespace Projeto2
                     }
                     board[newPos] = player;
                 }
+                //if the player isn't on the board
                 else
-                {                                          //se o jogador estiver fora do tabuleiro
+                {                                          
                     Console.WriteLine(position);
                     if (board[newPos] == opponent)
                     {
@@ -148,6 +149,34 @@ namespace Projeto2
                 return false;
             }
             return false;
+        }
+
+        public void play()
+        {
+            Random rand = new Random();
+            Boolean winner = false;
+        
+            //Creates player 1
+            int player1 = 1;
+            //Creates player 2   
+            int player2 = 2;
+            int moveByDie;
+
+            board.printBoard();
+            //while there isn't a winner runs 
+            while (winner != true)                                    
+            {
+                moveByDie = playerRoll(player1, rand);
+                winner = movePlayerByDie(player1, player2, moveByDie, board.board);
+                board.printBoard();
+                if (winner == true)
+                {
+                    break;
+                }
+                moveByDie = playerRoll(player2, rand);
+                winner = movePlayerByDie(player2, player1, moveByDie, board.board);
+                board.printBoard();
+            }
         }
     }
 }

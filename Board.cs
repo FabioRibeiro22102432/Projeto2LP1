@@ -19,7 +19,12 @@ namespace
         return board;
         }
 
-        public int[] buildBoard(Random rand)                // feito por Bruno e Fabio (para o relatorio)
+        /// <summary>
+        /// Generates positions on the board with special tiles
+        /// </summary>
+        /// <param name="rand">random number between (x,y)</param>
+        /// <returns>board with respective positions</returns>
+        public int[] buildBoard(Random rand)                
         {
             int cobraPosition = rand.Next(10, 24);
             int amountBoost = rand.Next(0, 3);
@@ -101,9 +106,8 @@ namespace
                 {
                     //if it is a normal tile prints empty
                     if (board[i + invert] == 0)
-                    {
-                        //Console.Write($"|{i+invert,2:d}    |");     //so you can see the numbers
-                        Console.Write($"| {"",3:d} |");               //Fazer um if para mostrar Snakes and Ladders
+                    {  
+                        Console.Write($"| {"",3:d} |");               
                     }
                     //if it is a "Cobra" tile prints "C"
                     else if (board[i + invert] == 4)

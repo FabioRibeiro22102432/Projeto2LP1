@@ -74,5 +74,66 @@ namespace
             return board;
 
         }
+
+        public  void printBoard()
+        {
+
+            //val is 25 - 1
+            int val = board.Length - 1;
+            int invert;
+
+            Console.WriteLine("\n-----------------------------------");
+            //while cycle that checks if the array has ended       
+            while (val > -1)
+            {
+                if (val % 2 == 0)
+                {
+                    //invert is -4 when the line starting number is pair                 
+                    invert = -4;
+                }
+                else
+                {
+                    //otherwise stays at 0
+                    invert = 0;
+                }
+                //for cycle that starts in the last Index and goes through the array 5 by 5 elements
+                for (int i = val; i > val - 5; i--)
+                {
+                    //if it is a normal tile prints empty
+                    if (board[i + invert] == 0)
+                    {
+                        //Console.Write($"|{i+invert,2:d}    |");     //so you can see the numbers
+                        Console.Write($"| {"",3:d} |");               //Fazer um if para mostrar Snakes and Ladders
+                    }
+                    //if it is a "Cobra" tile prints "C"
+                    else if (board[i + invert] == 4)
+                    {
+                        Console.Write($"| {"C",2:d}  |");
+                    }
+                    else if (board[i + invert] == 5)
+                    {
+                        Console.Write($"| {"B",2:d}  |");
+                    }
+                    else if (board[i + invert] == 6)
+                    {
+                        Console.Write($"| {"U",2:d}  |");
+                    }
+                    //if it is a player tile prints player
+                    else
+                    {
+                        Console.Write($"| {"P" + board[i + invert],2:d}  |");
+                    }
+                    //changes the value of invert according to the array position    
+                    if (val % 2 == 0)
+                    {
+                        invert += 2;
+                    }
+                }
+                Console.WriteLine("\n-----------------------------------");
+                val -= 5;
+            }
+        }
+
+
     }
 }

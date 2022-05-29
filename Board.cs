@@ -134,6 +134,16 @@ namespace
             }
         }
 
+        public int[] boostMaker(int amount, int min, int max, Random rand)
+        {
+            int[] array = new int[amount];
+            for (int i = 0; i < amount; i++)
+            {
+                array[i] = rand.Next(min, max);
+            }
+            return array;
+        }  
+
 
     }
 }

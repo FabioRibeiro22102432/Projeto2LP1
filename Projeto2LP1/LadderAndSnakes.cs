@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projeto2
+namespace Projeto2LP1
 {
     class LaddersAndSnakes
     {

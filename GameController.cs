@@ -158,6 +158,10 @@ namespace Projeto2
             return false;
         }
 
+
+        /// <summary>
+        /// Creates players, prints board in console and runs until a winner is found
+        /// </summary>
         public void play()
         {
             Random rand = new Random();
